@@ -5,7 +5,7 @@ data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 days <- seq.Date(as.Date("2007-02-01"),as.Date("2007-02-02"),by="day")
 dt <- data[data$Date %in% days,]
 
-png("Plot4.png",  width = 480, height = 480, units = "px")
+png("Plot4.png",  width = 480, height = 480, units = "px", bg = "transparent")
 par(mfrow=c(2,2))
 
 plot(y=dt$Global_active_power, x=dt$Stamp, ylab="Global Active Power", xlab="", type="l")
