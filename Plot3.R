@@ -5,7 +5,7 @@ data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 days <- seq.Date(as.Date("2007-02-01"),as.Date("2007-02-02"),by="day")
 dt <- data[data$Date %in% days,]
 
-png("Plot3.png",  width = 480, height = 480, units = "px", bg = "transparent")
+png("Plot3.png",  width = 480, height = 480, units = "px")
 plot(y=dt$Sub_metering_1, x=dt$Stamp, ylab="Energy sub metering", type="l", xlab="")
 lines(x=dt$Stamp, y=dt$Sub_metering_2, col="red")
 lines(x=dt$Stamp, y=dt$Sub_metering_3, col="blue")

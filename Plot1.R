@@ -5,7 +5,7 @@ data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 days <- seq.Date(as.Date("2007-02-01"),as.Date("2007-02-02"),by="day")
 dt <- data[data$Date %in% days,]
 
-png("Plot1.png",  width = 480, height = 480, units = "px", bg = "transparent")
+png("Plot1.png",  width = 480, height = 480, units = "px")
 hist(dt$Global_active_power, col="red", main="Global Active Power", xaxt='n',
      ylim=c(0, 1200), xlim=c(0,7), xlab="Global Active Power (kilowatts)")
 axis(side=1, at=seq(0,6, 2), labels=seq(0,6,2))
